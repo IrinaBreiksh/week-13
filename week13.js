@@ -100,7 +100,7 @@ const wrongDate = '2023-06-1155';
 
 let rightDate = Date.parse(wrongDate);
 
-if (rightDate == NaN){
+if (isNaN(rightDate)){
     console.log('Неправильный формат даты');
 } else {
     console.log('Правильный формат даты');
