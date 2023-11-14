@@ -75,8 +75,8 @@ console.log(futureDateInFutureYear);
 
 //Задание 14
 // Выведите в консоль разницу в годах между futureYear и текущим годом
-let difference2 = futureYear - currentYear;
-console.log(Math.round(difference2/(1000*60*60*24*12*365)));
+let difference2 = futureYear.getFullYear() - currentYear;
+console.log(difference2);
 
 //Задание 15
 // Используя метод Date.parse(), создайте новый объект date и преобразуйте переменную strDate в дату.
@@ -96,7 +96,7 @@ console.log(dateTimestamp);
 // Используя метод Date.parse(), попытайтесь преобразовать переменную wrongDate в дату. Добавьте условие, если результат преобразования является NaN, выведите в консоль сообщение 'Неправильный формат даты', в другом случае, выведите сообщение 'Правильный формат даты'.
 // Подсказка: используйте условие if...else
 
-const wrongDate = '2023-06-1155';
+const wrongDate = '2023-06-11';
 
 let rightDate = Date.parse(wrongDate);
 
@@ -105,7 +105,6 @@ if (isNaN(rightDate)){
 } else {
     console.log('Правильный формат даты');
 }
-// console.log(rightDate);
 
 
 //Задание 18
@@ -139,7 +138,7 @@ console.log(result);
 
 //Задание 21
 // Используя цикл if...else, проверьте является ли переменная number однозначным. Результат выведите в консоль.
-if (number / 1 < 10 ){
+if (number >= -9 && number <= 9 ){
     result = 'Переменная однозначное число';
 } else{
     result = 'Переменная не однозначное число';
@@ -148,7 +147,7 @@ console.log(result);
 
 //Задание 22
 // Используя цикл if...else, проверьте является ли переменная number двузначным. Результат выведите в консоль.
-if (number <= 99 && number >= 10 ){
+if ((number >= 10 && number <= 99) || (number <= -10 && number >= -99)){
     result = 'Переменная двузначное число';
 } else{
     result = 'Переменная не двузначное число';
@@ -187,7 +186,7 @@ if (number < 0){
 
 //Задание 26
 // Используя цикл if...else, проверьте является ли переменная number трёхзначным положительным числом. Результат выведите в консоль.
-if (number > 0 && (number / 100 < 10 && number / 100 > 1)){
+if (number >= 100 && number <= 999){
     console.log('Переменная трёхзначное положительное число');
 } else {
     console.log('Переменная не трёхзначное положительное число');
@@ -199,25 +198,25 @@ let dayNumber = 1;
 let dayName;
 
 switch (dayNumber) {
-    case dayNumber = 1:
+    case 1:
     dayName = "Понедельник";
     break;
-    case dayNumber = 2:
+    case 2:
     dayName = "Вторник";
     break;
-    case dayNumber = 3:
+    case 3:
     dayName = "Среда";
     break;
-    case dayNumber = 4:
+    case 4:
     dayName = "Четверг";
     break;
-    case dayNumber = 5:
+    case 5:
     dayName = "Пятница";
     break;
-    case dayNumber = 6:
+    case 6:
     dayName = "Суббота";
     break;
-    case dayNumber = 7:
+    case 7:
     dayName = "Воскресенье";
     break;
 }
